@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Biddakunzo – বিদ্যাকুঞ্জ</title>
+<meta name="description" content="Biddakunzo (বিদ্যাকুঞ্জ) — Pure Taste of English Literature. Academic education, professional skills and career preparation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+:root{--navy:#0D1B2A;--navy2:#16283d;--gold:#C9A24B;--gold-soft:#f3e7c6;--light:#F5F7FB;--white:#fff;--text:#1d2733;--muted:#5b6776;--line:#e3e8f0;--r:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Poppins','Hind Siliguri',system-ui,sans-serif;color:var(--text);background:var(--white);line-height:1.65}
+body[data-lang="bn"]{font-family:'Hind Siliguri','Poppins',system-ui,sans-serif}
+body [lang="en"],body [lang="bn"]{display:none}
+body[data-lang="en"] [lang="en"],body[data-lang="bn"] [lang="bn"]{display:inline}
+body[data-lang="en"] div[lang="en"],body[data-lang="bn"] div[lang="bn"],body[data-lang="en"] p[lang="en"],body[data-lang="bn"] p[lang="bn"],body[data-lang="en"] h1[lang="en"],body[data-lang="bn"] h1[lang="bn"],body[data-lang="en"] h2[lang="en"],body[data-lang="bn"] h2[lang="bn"],body[data-lang="en"] h3[lang="en"],body[data-lang="bn"] h3[lang="bn"]{display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:50;background:rgba(13,27,42,.97);backdrop-filter:blur(8px);color:#fff}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600}
+.logo-slot{width:40px;height:40px;border-radius:10px;border:1.5px dashed var(--gold);display:grid;place-items:center;font-size:9px;color:var(--gold);text-align:center;line-height:1.1}
+.brand small{display:block;font-size:11px;color:var(--gold);font-weight:400}
+nav ul{display:flex;gap:2px;list-style:none}
+nav a{display:block;padding:8px 10px;border-radius:8px;font-size:13.5px;color:#d6deea;white-space:nowrap}
+nav a:hover{background:var(--navy2);color:#fff}
+.tools{display:flex;gap:8px;align-items:center}
+.lang{border:1px solid var(--gold);color:var(--gold);background:none;border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer}
+.lang:hover{background:var(--gold);color:var(--navy)}
+.burger{display:none;background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
+@media(max-width:1060px){
+ .burger{display:block}
+ nav{position:absolute;top:68px;left:0;right:0;background:var(--navy);display:none;padding:10px 20px 18px;border-top:1px solid var(--navy2)}
+ nav.open{display:block}
+ nav ul{flex-direction:column}
+ nav a{font-size:15px;padding:11px 8px}
+}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:600;font-size:15px;border:2px solid transparent;cursor:pointer;transition:.2s}
+.btn-gold{background:var(--gold);color:var(--navy)}.btn-gold:hover{background:#d8b45f;transform:translateY(-2px)}
+.btn-line{border-color:rgba(255,255,255,.5);color:#fff}.btn-line:hover{background:#fff;color:var(--navy)}
+.hero{background:radial-gradient(900px 400px at 85% 10%,rgba(201,162,75,.18),transparent),linear-gradient(160deg,var(--navy),#10263c);color:#fff;padding:84px 0 96px}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;font-weight:600}
+.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.18;margin:14px 0 18px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{color:#c9d3e0;max-width:560px;font-size:17px;margin-bottom:28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:26px}
+.panel h3{font-size:15px;color:var(--gold);margin-bottom:14px}
+.panel ul{list-style:none;display:grid;gap:11px}
+.panel li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:#e5ebf4}
+.panel li::before{content:"✦";color:var(--gold)}
+@media(max-width:860px){.hero .grid{grid-template-columns:1fr}.hero{padding:56px 0 64px}}
+section{padding:72px 0}
+section.alt{background:var(--light)}
+.head{max-width:680px;margin-bottom:36px}
+.head .eyebrow{color:var(--gold)}
+.head h2{font-size:clamp(26px,3.4vw,38px);color:var(--navy);margin:8px 0 10px;line-height:1.25}
+.head p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;transition:.25s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(13,27,42,.1);border-color:var(--gold)}
+.ico{width:46px;height:46px;border-radius:12px;background:var(--gold-soft);display:grid;place-items:center;font-size:22px;margin-bottom:14px}
+.card h3{font-size:18px;color:var(--navy);margin-bottom:6px}
+.card p{font-size:14.5px;color:var(--muted)}
+.tag{display:inline-block;margin-top:14px;font-size:12px;padding:3px 10px;border-radius:999px;background:var(--light);color:var(--muted)}
+.audience{display:flex;flex-wrap:wrap;gap:10px}
+.audience span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:14px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+.check{list-style:none;display:grid;gap:12px;margin-top:16px}
+.check li{display:flex;gap:10px}.check li::before{content:"✓";color:var(--gold);font-weight:700}
+.founder{background:var(--navy);color:#fff;border-radius:24px;padding:32px;text-align:center}
+.avatar{width:96px;height:96px;border-radius:50%;margin:0 auto 14px;border:2px dashed var(--gold);display:grid;place-items:center;color:var(--gold);font-size:11px}
+.founder h3{font-size:22px}.founder p{color:var(--gold);font-size:14px}
+.note{font-size:12.5px;color:var(--muted);margin-top:14px;font-style:italic}
+.founder .note{color:#9fb0c6}
+.band{background:linear-gradient(120deg,var(--navy),#1b3350);color:#fff;border-radius:24px;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.band h2{font-size:28px;max-width:560px}
+footer{background:var(--navy);color:#b9c6d8;padding:56px 0 28px;font-size:14px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+@media(max-width:760px){.fgrid{grid-template-columns:1fr}}
+footer h4{color:#fff;margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:8px}footer a:hover{color:var(--gold)}
+.copy{border-top:1px solid var(--navy2);margin-top:32px;padding-top:18px;font-size:13px}
+.reveal{opacity:0;transform:translateY(16px);transition:.6s}.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body data-lang="en">
+
+<header>
+ <div class="wrap bar">
+  <a href="#home" class="brand">
+   <!-- Replace this slot with the official Biddakunzo logo file, unchanged -->
+   <div class="logo-slot">LOGO</div>
+   <div>Biddakunzo<small>বিদ্যাকুঞ্জ</small></div>
+  </a>
+  <nav id="nav"><ul id="menu"></ul></nav>
+  <div class="tools">
+   <button class="lang" id="langBtn" aria-label="Switch language">বাংলা</button>
+   <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="home" style="padding-top:84px">
+ <div class="wrap grid">
+  <div>
+   <div class="eyebrow">Biddakunzo · বিদ্যাকুঞ্জ</div>
+   <h1><span lang="en">Pure Taste of <em>English Literature</em></span><span lang="bn">ইংরেজি সাহিত্যের <em>খাঁটি স্বাদ</em></span></h1>
+   <p class="lead"><span lang="en">A modern learning platform for academic education, professional skills and career preparation, powered by technology and AI.</span><span lang="bn">একাডেমিক শিক্ষা, পেশাগত দক্ষতা ও ক্যারিয়ার প্রস্তুতির আধুনিক প্ল্যাটফর্ম, প্রযুক্তি ও এআই-সমৃদ্ধ।</span></p>
+   <div class="cta">
+    <a class="btn btn-gold" href="#courses"><span lang="en">Explore Courses</span><span lang="bn">কোর্স দেখুন</span></a>
+    <a class="btn btn-line" href="#online"><span lang="en">Online Classes</span><span lang="bn">অনলাইন ক্লাস</span></a>
+   </div>
+  </div>
+  <div class="panel">
+   <h3><span lang="en">What you can do here</span><span lang="bn">এখানে আপনি যা করতে পারবেন</span></h3>
+   <ul>
+    <li><span lang="en">Learn English Literature and Language</span><span lang="bn">ইংরেজি সাহিত্য ও ভাষা শিখুন</span></li>
+    <li><span lang="en">Build ICT, AI and freelancing skills</span><span lang="bn">আইসিটি, এআই ও ফ্রিল্যান্সিং দক্ষতা গড়ুন</span></li>
+    <li><span lang="en">Prepare for BCS and job exams</span><span lang="bn">বিসিএস ও চাকরির পরীক্ষার প্রস্তুতি নিন</span></li>
+    <li><span lang="en">Join live and recorded classes</span><span lang="bn">লাইভ ও রেকর্ডেড ক্লাসে যোগ দিন</span></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section id="about"><div class="wrap split">
+ <div class="reveal">
+  <div class="head" style="margin-bottom:0"><div class="eyebrow"><span lang="en">About Us</span><span lang="bn">আমাদের সম্পর্কে</span></div>
+  <h2><span lang="en">One platform, from classroom to career</span><span lang="bn">শ্রেণিকক্ষ থেকে ক্যারিয়ার, এক প্ল্যাটফর্মে</span></h2>
+  <p><span lang="en">Biddakunzo brings school, college and university learners, language students, job seekers and professionals together in one learning ecosystem.</span><span lang="bn">বিদ্যাকুঞ্জ স্কুল, কলেজ ও বিশ্ববিদ্যালয়ের শিক্ষার্থী, ভাষা শিক্ষার্থী, চাকরিপ্রার্থী ও পেশাজীবীদের এক শিক্ষা-পরিবারে যুক্ত করে।</span></p></div>
+  <ul class="check">
+   <li><span lang="en">Academic excellence with modern technology</span><span lang="bn">আধুনিক প্রযুক্তির সাথে একাডেমিক শ্রেষ্ঠত্ব</span></li>
+   <li><span lang="en">AI-assisted study tools (coming soon)</span><span lang="bn">এআই-সহায়ক স্টাডি টুলস (শীঘ্রই আসছে)</span></li>
+   <li><span lang="en">Bengali and English support throughout</span><span lang="bn">সর্বত্র বাংলা ও ইংরেজি সুবিধা</span></li>
+  </ul>
+ </div>
+ <div class="founder reveal">
+  <div class="avatar">PHOTO</div>
+  <h3>Ripon Sen</h3>
+  <p><span lang="en">Founder, Director &amp; Instructor</span><span lang="bn">প্রতিষ্ঠাতা, পরিচালক ও প্রশিক্ষক</span></p>
+  <div class="note"><span lang="en">Biography to be added by the founder.</span><span lang="bn">জীবনী প্রতিষ্ঠাতা কর্তৃক যুক্ত করা হবে।</span></div>
+ </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+ <div class="head"><div class="eyebrow"><span lang="en">Who we serve</span><span lang="bn">কাদের জন্য</span></div>
+ <h2><span lang="en">Learning for every stage</span><span lang="bn">প্রতিটি ধাপের শিক্ষার্থীর জন্য</span></h2></div>
+ <div class="audience" id="audience"></div>
+</div></section>
+
+<section id="courses"><div class="wrap">
+ <div class="head"><div class="eyebrow"><span lang="en">Courses</span><span lang="bn">কোর্সসমূহ</span></div>
+ <h2><span lang="en">Course categories</span><span lang="bn">কোর্স ক্যাটাগরি</span></h2>
+ <p><span lang="en">Detailed course lists, fees and schedules will appear here once confirmed.</span><span lang="bn">কোর্সের বিস্তারিত তালিকা, ফি ও সময়সূচি নিশ্চিত হলে এখানে দেখানো হবে।</span></p></div>
+ <div class="cards" id="courseCards"></div>
+</div></section>
+
+<section class="alt" id="departments"><div class="wrap">
+ <div class="head"><div class="eyebrow"><span lang="en">Departments</span><span lang="bn">বিভাগসমূহ</span></div>
+ <h2><span lang="en">Explore by department</span><span lang="bn">বিভাগ অনুযায়ী খুঁজুন</span></h2></div>
+ <div class="cards" id="deptCards"></div>
+</div></section>
+
+<section id="online"><div class="wrap split">
+ <div class="reveal">
+  <div class="head" style="margin-bottom:0"><div class="eyebrow"><span lang="en">Online Classes</span><span lang="bn">অনলাইন ক্লাস</span></div>
+  <h2><span lang="en">Learn live or at your own pace</span><span lang="bn">লাইভ অথবা নিজের গতিতে শিখুন</span></h2></div>
+  <ul class="check">
+   <li><span lang="en">Live classes with scheduled batches</span><span lang="bn">নির্দিষ্ট ব্যাচে লাইভ ক্লাস</span></li>
+   <li><span lang="en">Recorded lessons with progress tracking</span><span lang="bn">অগ্রগতি ট্র্যাকসহ রেকর্ডেড লেসন</span></li>
+   <li><span lang="en">Quizzes, assignments and certificates</span><span lang="bn">কুইজ, অ্যাসাইনমেন্ট ও সার্টিফিকেট</span></li>
+  </ul>
+  <p class="note"><span lang="en">Student login and live class schedule: coming in the next phase.</span><span lang="bn">স্টুডেন্ট লগইন ও লাইভ ক্লাসের সময়সূচি: পরবর্তী ধাপে আসছে।</span></p>
+ </div>
+ <div class="card reveal" style="padding:32px">
+  <div class="ico">🎥</div><h3><span lang="en">Student Portal</span><span lang="bn">স্টুডেন্ট পোর্টাল</span></h3>
+  <p><span lang="en">Dashboard, enrolled courses, class schedule, materials and results in one place.</span><span lang="bn">ড্যাশবোর্ড, ভর্তিকৃত কোর্স, ক্লাস রুটিন, ম্যাটেরিয়াল ও ফলাফল এক জায়গায়।</span></p>
+  <span class="tag"><span lang="en">Coming soon</span><span lang="bn">শীঘ্রই আসছে</span></span>
+ </div>
+</div></section>
+
+<section class="alt" id="teachers"><div class="wrap">
+ <div class="head"><div class="eyebrow"><span lang="en">Teachers</span><span lang="bn">শিক্ষকবৃন্দ</span></div>
+ <h2><span lang="en">Meet our instructors</span><span lang="bn">আমাদের শিক্ষকদের জানুন</span></h2>
+ <p><span lang="en">Instructor profiles are published only after they are approved.</span><span lang="bn">অনুমোদনের পরেই শিক্ষকদের প্রোফাইল প্রকাশ করা হবে।</span></p></div>
+ <div class="cards"><div class="card"><div class="avatar" style="width:72px;height:72px;margin:0 0 12px;color:var(--gold)">PHOTO</div><h3>Ripon Sen</h3><p><span lang="en">Founder, Director &amp; Instructor</span><span lang="bn">প্রতিষ্ঠাতা, পরিচালক ও প্রশিক্ষক</span></p></div></div>
+</div></section>
+
+<section id="materials"><div class="wrap">
+ <div class="head"><div class="eyebrow"><span lang="en">Study Materials</span><span lang="bn">স্টাডি ম্যাটেরিয়ালস</span></div>
+ <h2><span lang="en">Notes, books and practice sets</span><span lang="bn">নোট, বই ও প্র্যাকটিস সেট</span></h2></div>
+ <div class="cards" id="matCards"></div>
+</div></section>
+
+<section class="alt" id="jobs"><div class="wrap">
+ <div class="head"><div class="eyebrow"><span lang="en">Job Preparation</span><span lang="bn">চাকরির প্রস্তুতি</span></div>
+ <h2><span lang="en">Prepare for your next opportunity</span><span lang="bn">পরবর্তী সুযোগের জন্য প্রস্তুত হোন</span></h2></div>
+ <div class="cards" id="jobCards"></div>
+</div></section>
+
+<section id="blog"><div class="wrap">
+ <div class="head"><div class="eyebrow"><span lang="en">Blog &amp; Articles</span><span lang="bn">ব্লগ ও আর্টিকেল</span></div>
+ <h2><span lang="en">Ideas, guides and updates</span><span lang="bn">আইডিয়া, গাইড ও আপডেট</span></h2>
+ <p><span lang="en">Articles on literature, language learning, technology and careers will be published here.</span><span lang="bn">সাহিত্য, ভাষা শিক্ষা, প্রযুক্তি ও ক্যারিয়ার নিয়ে লেখা এখানে প্রকাশিত হবে।</span></p></div>
+ <div class="band reveal">
+  <h2><span lang="en">Start your learning journey with Biddakunzo</span><span lang="bn">বিদ্যাকুঞ্জের সাথে শুরু করুন আপনার শেখার যাত্রা</span></h2>
+  <a class="btn btn-gold" href="#courses"><span lang="en">Explore Courses</span><span lang="bn">কোর্স দেখুন</span></a>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <div class="fgrid">
+  <div><h4>Biddakunzo · বিদ্যাকুঞ্জ</h4><p>Pure Taste of English Literature</p><p style="margin-top:8px">www.biddakunzo.com</p></div>
+  <div><h4><span lang="en">Explore</span><span lang="bn">এক্সপ্লোর</span></h4><ul id="footMenu"></ul></div>
+  <div><h4><span lang="en">Contact</span><span lang="bn">যোগাযোগ</span></h4><p><span lang="en">Contact details will be added here.</span><span lang="bn">যোগাযোগের তথ্য এখানে যুক্ত করা হবে।</span></p></div>
+ </div>
+ <div class="copy">© 2026 Biddakunzo · বিদ্যাকুঞ্জ</div>
+</div></footer>
+
+<script>
+const T=(en,bn)=>`<span lang="en">${en}</span><span lang="bn">${bn}</span>`;
+const NAV=[["#home","Home","হোম"],["#about","About Us","আমাদের সম্পর্কে"],["#courses","Courses","কোর্সসমূহ"],["#departments","Departments","বিভাগসমূহ"],["#online","Online Classes","অনলাইন ক্লাস"],["#teachers","Teachers","শিক্ষকবৃন্দ"],["#materials","Study Materials","স্টাডি ম্যাটেরিয়ালস"],["#jobs","Job Preparation","চাকরির প্রস্তুতি"],["#blog","Blog & Articles","ব্লগ ও আর্টিকেল"]];
+const AUD=[["School students","স্কুল শিক্ষার্থী"],["College students","কলেজ শিক্ষার্থী"],["University students","বিশ্ববিদ্যালয় শিক্ষার্থী"],["National University students","জাতীয় বিশ্ববিদ্যালয় শিক্ষার্থী"],["English Literature students","ইংরেজি সাহিত্যের শিক্ষার্থী"],["English Language learners","ইংরেজি ভাষা শিক্ষার্থী"],["ICT learners","আইসিটি শিক্ষার্থী"],["AI learners","এআই শিক্ষার্থী"],["Freelancers","ফ্রিল্যান্সার"],["Job seekers","চাকরিপ্রার্থী"],["BCS candidates","বিসিএস প্রার্থী"],["Government & private job candidates","সরকারি ও বেসরকারি চাকরিপ্রার্থী"],["Teachers & instructors","শিক্ষক ও প্রশিক্ষক"],["General learners","সাধারণ শিক্ষার্থী"]];
+const COURSES=[["📖","English Literature","ইংরেজি সাহিত্য","Poetry, drama, prose and criticism.","কবিতা, নাটক, গদ্য ও সমালোচনা।"],["✍️","English Language","ইংরেজি ভাষা","Grammar, writing, speaking and comprehension.","ব্যাকরণ, লেখা, কথা বলা ও বোধগম্যতা।"],["🎓","Academic Courses","একাডেমিক কোর্স","School, college and university support.","স্কুল, কলেজ ও বিশ্ববিদ্যালয়ের পাঠ-সহায়তা।"],["💻","ICT & Computer Skills","আইসিটি ও কম্পিউটার দক্ষতা","Essential digital and office skills.","প্রয়োজনীয় ডিজিটাল ও অফিস দক্ষতা।"],["🤖","AI Training","এআই প্রশিক্ষণ","Practical AI tools for study and work.","পড়াশোনা ও কাজের জন্য ব্যবহারিক এআই টুলস।"],["🚀","Freelancing & Career","ফ্রিল্যান্সিং ও ক্যারিয়ার","Skills for online and professional work.","অনলাইন ও পেশাগত কাজের দক্ষতা।"]];
+const DEPTS=[["School","স্কুল","🏫"],["College","কলেজ","🏛️"],["University & National University","বিশ্ববিদ্যালয় ও জাতীয় বিশ্ববিদ্যালয়","🎓"],["English Literature","ইংরেজি সাহিত্য","📚"],["English Language","ইংরেজি ভাষা","🗣️"],["ICT","আইসিটি","🖥️"],["Artificial Intelligence","কৃত্রিম বুদ্ধিমত্তা","🧠"],["Job Preparation","চাকরির প্রস্তুতি","🎯"]];
+const MATS=[["📝","Lecture Notes","লেকচার নোট","Organised notes by subject and level.","বিষয় ও স্তর অনুযায়ী সাজানো নোট।"],["📘","Digital Books","ডিজিটাল বই","E-books in the upcoming bookstore.","আসন্ন বুকস্টোরে ই-বুক।"],["🧪","Practice Questions","প্র্যাকটিস প্রশ্ন","Question banks and model tests.","প্রশ্নব্যাংক ও মডেল টেস্ট।"]];
+const JOBS=[["🏅","BCS Preparation","বিসিএস প্রস্তুতি","Syllabus-based study and model tests.","সিলেবাসভিত্তিক পড়াশোনা ও মডেল টেস্ট।"],["🏢","Government & Private Jobs","সরকারি ও বেসরকারি চাকরি","Written, MCQ and interview preparation.","লিখিত, এমসিকিউ ও ইন্টারভিউ প্রস্তুতি।"],["💼","Freelancing","ফ্রিল্যান্সিং","Skills and guidance for online work.","অনলাইন কাজের দক্ষতা ও দিকনির্দেশনা।"]];
+const card=(i,en,bn,den,dbn)=>`<div class="card reveal"><div class="ico">${i}</div><h3>${T(en,bn)}</h3><p>${T(den,dbn)}</p></div>`;
+document.getElementById('menu').innerHTML=NAV.map(n=>`<li><a href="${n[0]}">${T(n[1].replace('&','&amp;'),n[2])}</a></li>`).join('');
+document.getElementById('footMenu').innerHTML=NAV.slice(1,6).map(n=>`<li><a href="${n[0]}">${T(n[1],n[2])}</a></li>`).join('');
+document.getElementById('audience').innerHTML=AUD.map(a=>`<span>${T(a[0].replace('&','&amp;'),a[1])}</span>`).join('');
+document.getElementById('courseCards').innerHTML=COURSES.map(c=>card(...c)).join('');
+document.getElementById('deptCards').innerHTML=DEPTS.map(d=>`<div class="card reveal"><div class="ico">${d[2]}</div><h3>${T(d[0].replace('&','&amp;'),d[1])}</h3></div>`).join('');
+document.getElementById('matCards').innerHTML=MATS.map(c=>card(...c)).join('');
+document.getElementById('jobCards').innerHTML=JOBS.map(c=>card(...c)).join('');
+const body=document.body,btn=document.getElementById('langBtn');
+function setLang(l){body.dataset.lang=l;document.documentElement.lang=l;btn.textContent=l==='en'?'বাংলা':'English';try{localStorage.setItem('bk-lang',l)}catch(e){}}
+let saved='en';try{saved=localStorage.getItem('bk-lang')||'en'}catch(e){}
+setLang(saved);
+btn.onclick=()=>setLang(body.dataset.lang==='en'?'bn':'en');
+const nav=document.getElementById('nav');
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+nav.addEventListener('click',e=>{if(e.target.closest('a'))nav.classList.remove('open')});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
